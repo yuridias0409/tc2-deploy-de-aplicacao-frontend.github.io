@@ -1,0 +1,14 @@
+<section [ngClass]="show ? 'show' : 'hidden'">
+  <div class="card" style="width: 18rem;">
+    <button class="btn btn-outline-danger" (click)="fecharCard()">X</button>
+    <img class="card-img-top" src="{{pessoa.foto}}" alt="{{pessoa.nome}}" title="{{pessoa.nome}}">
+    <div class="card-body">
+      <h5 class="card-title">{{pessoa.nome}}</h5>
+      <p class="card-text">Idade: {{pessoa.idade}} anos</p>
+      <button (click)="editarPessoa(pessoa)" class="btn btn-outline-success btn-block">Editar</button>
+      <br>
+      <button (click)="removerPessoa(pessoa._id)" class="btn btn-outline-danger btn-block">Remover</button>
+    </div>
+  </div>
+  <br>
+</section>

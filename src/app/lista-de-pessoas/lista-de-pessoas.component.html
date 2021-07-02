@@ -1,0 +1,10 @@
+<section>
+    <h2>Pessoas</h2>
+    <ul *ngIf="pessoas.length > 0">
+        <li *ngFor="let p of pessoas" [class.completed]="p.complete">
+            <a (click)="getPessoa(p)" href="#">{{p.nome}}</a>
+        </li>
+    </ul>
+    <app-mostrar-pessoa *ngIf="selectedPessoa" [pessoa]="selectedPessoa" [show]="true" (clearPessoa)="clearPessoa($event)" (pessoaParaEditar)="editarPessoa($event)"></app-mostrar-pessoa>
+    <p *ngIf="pessoas.length === 0">Nenhuma pessoa foi cadastrada</p>
+</section>

@@ -1,0 +1,12 @@
+<main class="grid container">
+  <div>
+    <app-lista-de-pessoas (pessoaParaEditar)="editarPessoa($event)"></app-lista-de-pessoas>
+    <button class="btn btn-outline-primary" (click)="hiddenOrShow()">Adicionar Pessoa</button>
+  </div>
+  <div>
+    <button [hidden]="show2" style="float: right;" class="btn btn-outline-danger" (click)="hiddenOrShow()">X</button>
+    <br>
+    <app-formulario-cadastro [hidden]="show2" [pessoaEditar]="pessoaParaEditar" (clearPessoa)="clearPessoa($event)"></app-formulario-cadastro>
+  </div>
+</main>
+
